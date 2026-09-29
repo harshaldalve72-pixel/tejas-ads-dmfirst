@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,31 +11,41 @@
     content="Join our Telegram channel for the latest updates and exclusive content."
   >
 
-  <!-- ========================= -->
-  <!-- META PIXEL -->
-  <!-- ========================= -->
+  <!-- =========================
+       META PIXEL
+  ========================== -->
 
   <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;
-  n.push=n;
-  n.loaded=!0;
-  n.version='2.0';
-  n.queue=[];
-  t=b.createElement(e);
-  t.async=!0;
-  t.src=v;
-  s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}
-  (window, document, 'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
+    !function(f,b,e,v,n,t,s)
+    {
+      if(f.fbq)return;
 
-  fbq('init', '38964688476477925');
+      n=f.fbq=function(){
+        n.callMethod ?
+        n.callMethod.apply(n,arguments) :
+        n.queue.push(arguments)
+      };
 
-  // Track landing page visit
-  fbq('track', 'PageView');
+      if(!f._fbq)f._fbq=n;
+
+      n.push=n;
+      n.loaded=!0;
+      n.version='2.0';
+      n.queue=[];
+
+      t=b.createElement(e);
+      t.async=!0;
+      t.src=v;
+
+      s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }
+    (window, document, 'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '38964688476477925');
+
+    fbq('track', 'PageView');
   </script>
 
   <noscript>
@@ -45,7 +54,7 @@
       width="1"
       style="display:none"
       src="https://www.facebook.com/tr?id=38964688476477925&ev=PageView&noscript=1"
-    />
+    >
   </noscript>
 
   <!-- END META PIXEL -->
@@ -80,9 +89,7 @@
       padding: 20px;
     }
 
-
     .container {
-
       width: 100%;
       max-width: 430px;
 
@@ -104,9 +111,7 @@
         0 20px 50px rgba(0,0,0,0.2);
     }
 
-
     .telegram-icon {
-
       width: 85px;
       height: 85px;
 
@@ -125,26 +130,19 @@
         0 10px 30px rgba(0,0,0,0.2);
     }
 
-
     .telegram-icon svg {
-
       width: 48px;
       height: 48px;
 
       fill: #0088cc;
     }
 
-
     h1 {
-
       font-size: 30px;
-
       margin-bottom: 12px;
     }
 
-
     .description {
-
       font-size: 16px;
 
       line-height: 1.6;
@@ -154,25 +152,18 @@
       margin-bottom: 28px;
     }
 
-
     .countdown {
-
       font-size: 17px;
 
       margin-bottom: 20px;
     }
 
-
     #timer {
-
       font-weight: bold;
-
       font-size: 22px;
     }
 
-
     .join-btn {
-
       display: block;
 
       width: 100%;
@@ -194,38 +185,24 @@
       transition: 0.25s ease;
     }
 
-
-    /* Main Telegram Button */
-
     .telegram-btn {
-
       background: white;
-
       color: #0088cc;
     }
 
-
-    /* Subscribe Button */
-
     .subscribe-btn {
-
       background: #00a884;
-
       color: white;
     }
 
-
     .join-btn:hover {
-
       transform: translateY(-2px);
 
       box-shadow:
         0 10px 25px rgba(0,0,0,0.2);
     }
 
-
     .note {
-
       margin-top: 20px;
 
       font-size: 13px;
@@ -233,18 +210,16 @@
       opacity: 0.75;
     }
 
-
     @media (max-width: 480px) {
 
       .container {
-
         padding: 35px 20px;
       }
 
       h1 {
-
         font-size: 26px;
       }
+
     }
 
   </style>
@@ -254,11 +229,7 @@
 
 <body>
 
-
   <div class="container">
-
-
-    <!-- TELEGRAM ICON -->
 
     <div class="telegram-icon">
 
@@ -279,74 +250,52 @@
 
 
     <p class="description">
-
       Get the latest updates,
       announcements and exclusive
       content directly on Telegram.
-
     </p>
 
-
-    <!-- COUNTDOWN -->
 
     <div class="countdown">
 
       Redirecting in
 
-      <span id="timer">
-        2
-      </span>
+      <span id="timer">2</span>
 
       seconds...
 
     </div>
 
 
-    <!-- ========================= -->
-    <!-- JOIN TELEGRAM BUTTON -->
-    <!-- ========================= -->
-
     <a
       id="telegramJoinBtn"
       class="join-btn telegram-btn"
       href="https://t.me/+5Y7cAov_EPVlMWM1"
     >
-
       🚀 Join Telegram Channel
-
     </a>
 
-
-    <!-- ========================= -->
-    <!-- SUBSCRIBE BUTTON -->
-    <!-- ========================= -->
 
     <a
       id="subscribeBtn"
       class="join-btn subscribe-btn"
       href="https://t.me/+5Y7cAov_EPVlMWM1"
     >
-
       🔔 Subscribe on Telegram
-
     </a>
 
 
     <p class="note">
-
       If you are not redirected automatically,
       click a button above.
-
     </p>
-
 
   </div>
 
 
-
-  <!-- ========================= -->
-  <!-- BUTTON TRACKING -->
-  <!-- ========================= -->
+  <!-- =========================
+       EVENT TRACKING
+  ========================== -->
 
   <script>
 
@@ -355,36 +304,55 @@
 
 
     /*
-      Track Join Telegram button
+      Manual Telegram button
+
+      This means:
+      "User clicked the Telegram button"
+
+      It does NOT mean:
+      "User joined Telegram"
     */
 
     document
       .getElementById("telegramJoinBtn")
       .addEventListener("click", function () {
 
+        const eventId =
+          crypto.randomUUID();
+
         fbq(
           "trackCustom",
-          "TelegramJoinClick"
+          "TelegramJoinClick",
+          {},
+          {
+            eventID: eventId
+          }
         );
 
       });
 
 
     /*
-      Track Subscribe button
+      Subscribe button
     */
 
     document
       .getElementById("subscribeBtn")
       .addEventListener("click", function () {
 
+        const eventId =
+          crypto.randomUUID();
+
         fbq(
           "trackCustom",
-          "TelegramSubscribeClick"
+          "TelegramSubscribeClick",
+          {},
+          {
+            eventID: eventId
+          }
         );
 
       });
-
 
 
     /*
@@ -411,16 +379,34 @@
 
           clearInterval(countdown);
 
+
           /*
-            Optional:
-            Track automatic redirect
+            This event means:
+
+            "Visitor reached the
+             automatic Telegram redirect."
+
+            It DOES NOT mean:
+            "Visitor joined Telegram."
           */
+
+          const eventId =
+            crypto.randomUUID();
+
 
           fbq(
             "trackCustom",
-            "TelegramAutoRedirect"
+            "TelegramRedirect",
+            {},
+            {
+              eventID: eventId
+            }
           );
 
+
+          /*
+            Redirect to Telegram
+          */
 
           window.location.href =
             telegramLink;
@@ -431,7 +417,5 @@
 
   </script>
 
-
 </body>
 </html>
-```
